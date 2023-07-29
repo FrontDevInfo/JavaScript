@@ -22,48 +22,51 @@ console.log(typeof newString);
 console.log(typeof `Теперь я строка ${number}`);
 console.log(typeof number.toString()); // string
 
-console.log(String(null)); // "null"
-console.log(String(undefined)); // "undefined"
-console.log(String(true)); // "true"
-console.log(String(false)); // "false"
-console.log(String(3)); // "3"
-console.log(String(NaN)); // "NaN"
-console.log(String(180 * 44)); // "7920"
-console.log(String({})); // "[object Object]"
-console.log(String({ name: "Al" })); // "[object Object]"
-console.log(String([])); // ""
-console.log(String([8, 9, 14])); // "8,9,14"
-console.log(String([[1, 4, 8], [48, 12], [89]])); // "1,4,8,48,12,89"
 console.log(
+	String(null), // "null"
+	String(undefined), // "undefined"
+	String(true), // "true"
+	String(false), // "false"
+	String(3), // "3"
+	String(NaN), // "NaN"
+	String(180 * 44), // "7920"
+	String({}), // "[object Object]"
+	String({ name: "Al" }), // "[object Object]"
+	String([]), // ""
+	String([8, 9, 14]), // "8,9,14"
+	String([[1, 4, 8], [48, 12], [89]]), // "1,4,8,48,12,89"
 	String([
 		{ a: 4, b: 8 },
 		{ e: 78, i: "девять" },
-	])
-); // "[object Object],[object Object]"
+	]) //"[object Object],[object Object]"
+);
 
-
-console.log(string + null); // "Я строка null"
-console.log(string + undefined); // "Я строка undefined"
-console.log(string + true); // "Я строка true"
-console.log(string + false); // "Я строка false"
-console.log(string + 3); // "Я строка 3"
-console.log(string + NaN); // "Я строка NaN"
-console.log(string + 180 * 44); // "Я строка 7920"
-console.log(string + {}); // "Я строка [object Object]"
-console.log(string + { name: "Al" }); // "Я строка [object Object]"
-console.log(string + []); // "Я строка"
-console.log(string + [8, 9, 14]); // "Я строка 8,9,14"
+console.log(
+	string + null, // "Я строка null"
+	string + undefined, // "Я строка undefined"
+	string + true, // "Я строка true"
+	string + false, // "Я строка false"
+	string + 3, // "Я строка 3"
+	string + NaN, // "Я строка NaN"
+	string + 180 * 44, // "Я строка 7920"
+	string + {}, // "Я строка [object Object]"
+	string + { name: "Al" }, // "Я строка [object Object]"
+	string + [], // "Я строка"
+	string + [8, 9, 14] // "Я строка 8,9,14"
+);
 
 const number = 17;
-console.log(true.toString()); // "true"
-console.log(false.toString()); // "false"
-console.log(number.toString()); // "17"
-console.log(NaN.toString()); // "NaN"
-console.log((180 * 44).toString()); // "7920"
-console.log({}.toString()); // "[object Object]"
-console.log({ name: "Al" }.toString()); // "[object Object]"
-console.log([].toString()); // ""
-console.log([8, 9, 14].toString()); // "8,9,14"
+console.log(
+	true.toString(), // "true"
+	false.toString(), // "false"
+	number.toString(), // "17"
+	NaN.toString(), // "NaN"
+	(180 * 44).toString(), // "7920"
+	{}.toString(), // "[object Object]"
+	{ name: "Al" }.toString(), // "[object Object]"
+	[].toString(), // ""
+	[8, 9, 14].toString() // "8,9,14"
+);
 
 // В число
 console.log(typeof string);
@@ -71,21 +74,23 @@ console.log(typeof Number(string)); // number
 console.log(typeof +string); // number
 
 const string = "18";
-const newNumber =  parseInt(string, 10) // Число в десятичной системе счисления
+const newNumber = parseInt(string, 10); // Число в десятичной системе счисления
 console.log(newNumber); //18
-console.log(typeof newNumber);  //number
+console.log(typeof newNumber); //number
 
-console.log(Number(null)); // 0
-console.log(Number(undefined)); // NaN
-console.log(Number(true)); // 1
-console.log(Number(false)); // 0
-console.log(Number("Я строка")); // NaN
-console.log(Number("17")); // 17
-console.log(Number(NaN)); // NaN
-console.log(Number({})); // NaN
-console.log(Number({ name: "Al" })); // NaN
-console.log(Number([])); // 0
-console.log(Number([8, 9, 14])); // NaN
+console.log(
+	Number(null), // 0
+	Number(undefined), // NaN
+	Number(true), // 1
+	Number(false), // 0
+	Number("Я строка"), // NaN
+	Number("17"), // 17
+	Number(NaN), // NaN
+	Number({}), // NaN
+	Number({ name: "Al" }), // NaN
+	Number([]), // 0
+	Number([8, 9, 14]) // NaN
+);
 
 // В boolean
 const fullString = "Я строка";
@@ -119,7 +124,7 @@ console.log(
 	!!NaN // false
 );
 
-console.log(typeof !!fullString); // boolean 
+console.log(typeof !!fullString); // boolean
 
 // window.isNaN
 //Вернет true
@@ -131,7 +136,7 @@ console.log(
 	window.isNaN("18,4"),
 	window.isNaN(Date().toString()),
 	window.isNaN("обычная строка")
-)
+);
 
 //Вернет false
 console.log(
@@ -142,15 +147,11 @@ console.log(
 	window.isNaN(""), //преобразуется в 0
 	window.isNaN(" "), //преобразуется в 0
 	window.isNaN(new Date())
-)
+);
 
 // Number.isNaN
 //Вернет true
-console.log(
-	Number.isNaN(NaN),
-	Number.isNaN(Number.NaN),
-	Number.isNaN(0/0),
-)
+console.log(Number.isNaN(NaN), Number.isNaN(Number.NaN), Number.isNaN(0 / 0));
 
 //Вернет false
 console.log(
@@ -167,7 +168,7 @@ console.log(
 	Number.isNaN(""), //преобразуется в 0
 	Number.isNaN(" "), //преобразуется в 0
 	Number.isNaN(new Date())
-)
+);
 
 // Объект и массив
 const newObject = {
